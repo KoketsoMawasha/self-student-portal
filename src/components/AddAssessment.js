@@ -1,4 +1,5 @@
 import React from "react";
+import "../styling/AddAssessment.css";
 
 export default function AddAssignment() {
   return (
