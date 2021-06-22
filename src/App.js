@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import AddAssignment from "./components/AddAssignment";
+import AddAssessment from "./components/AddAssessment";
+import Assessments from "./components/Asessments";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <AddAssignment />
+      <AddAssessment />
+      <Assessments />
     </div>
   );
 }
