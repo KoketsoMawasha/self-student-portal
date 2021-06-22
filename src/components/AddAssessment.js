@@ -11,7 +11,7 @@ export default function AddAssignment() {
         </div>
 
         <div className="form-control">
-          <label htmlFor="module">module</label>
+          <label htmlFor="module">Module</label>
           <input type="text" />
         </div>
 
