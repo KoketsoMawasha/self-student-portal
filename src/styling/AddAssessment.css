@@ -28,3 +28,16 @@ input{
 input:focus{
   outline: none;
 }
+
+#submitBtn{
+  background: rgb(3, 165, 170);
+  color: rgb(250,250,250);
+}
+
+/* :required::after{
+  outline: solid .1rem rgb(175, 1, 1);
+}
+
+:optional{
+  outline:  solid .1rem rgb(1, 163, 175);
+} */

@@ -7,17 +7,20 @@ export default function AddAssignment() {
       <form>
         <div className="form-control">
           <label htmlFor="type">Assessment Type</label>
-          <input type="text" />
+          <input type="text" required />
         </div>
 
         <div className="form-control">
           <label htmlFor="module">Module</label>
-          <input type="text" />
+          <input type="text" required />
         </div>
 
         <div className="form-control">
           <label htmlFor="date">Due Date</label>
-          <input type="text" />
+          <input type="text" required />
+        </div>
+        <div className="form-control">
+          <input id="submitBtn" type="submit" value="Add Assessment" />
         </div>
       </form>
     </div>
