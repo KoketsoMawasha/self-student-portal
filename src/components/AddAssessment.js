@@ -1,28 +1,35 @@
-import React from "react";
 import "../styling/AddAssessment.css";
+import React, { Component } from "react";
 
-export default function AddAssignment() {
-  return (
-    <div>
-      <form>
-        <div className="form-control">
-          <label htmlFor="type">Assessment Type</label>
-          <input type="text" required />
-        </div>
+export default class AddAssessment extends Component {
+  state = {
+    type: "",
+    moduleName: "",
+    dueDate: "",
+  };
 
-        <div className="form-control">
-          <label htmlFor="module">Module</label>
-          <input type="text" required />
-        </div>
+  render() {
+    const { type, moduleName, dueDate } = this.state;
 
-        <div className="form-control">
-          <label htmlFor="date">Due Date</label>
-          <input type="text" required />
-        </div>
-        <div className="form-control">
-          <input id="submitBtn" type="submit" value="Add Assessment" />
-        </div>
-      </form>
-    </div>
-  );
+    return (
+      <div>
+        <form>
+          <div className="form-control">
+            <label htmlFor="type">Assessment Type</label>
+            <input type="text" value={type} />
+          </div>
+
+          <div className="form-control">
+            <label htmlFor="module">Module</label>
+            <input type="text" value={moduleName} />
+          </div>
+
+          <div className="form-control">
+            <label htmlFor="date">Due Date</label>
+            <input type="text" value={dueDate} />
+          </div>
+        </form>
+      </div>
+    );
+  }
 }
