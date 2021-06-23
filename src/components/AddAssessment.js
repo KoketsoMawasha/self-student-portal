@@ -8,6 +8,10 @@ export default class AddAssessment extends Component {
     dueDate: "",
   };
 
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   render() {
     const { type, moduleName, dueDate } = this.state;
 
@@ -16,17 +20,33 @@ export default class AddAssessment extends Component {
         <form>
           <div className="form-control">
             <label htmlFor="type">Assessment Type</label>
-            <input type="text" value={type} />
+            <input
+              name="type"
+              type="text"
+              value={type}
+              onChange={this.onChange}
+            />
           </div>
 
           <div className="form-control">
             <label htmlFor="module">Module</label>
-            <input type="text" value={moduleName} />
+            <input
+              name="moduleName"
+              type="text"
+              value={moduleName}
+              onChange={this.onChange}
+            />
           </div>
 
           <div className="form-control">
             <label htmlFor="date">Due Date</label>
-            <input type="text" value={dueDate} />
+            <input
+              name="dueDate"
+              type="text"
+              value={dueDate}
+              onChange={this.onChange}
+            />
+            <input id="submitBtn" type="submit" value="Add Assessment" />
           </div>
         </form>
       </div>
