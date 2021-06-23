@@ -1,5 +1,6 @@
 import "../styling/AddAssessment.css";
 import React, { Component } from "react";
+import FormInputGroup from "./FormInputGroup";
 
 export default class AddAssessment extends Component {
   state = {
@@ -12,40 +13,41 @@ export default class AddAssessment extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  onSubmit = (e) => {
+    e.preventDefault();
+
+    // 1.Check if inputs are there
+
+    // 2.after successful submit, clear inputs
+  };
+
   render() {
     const { type, moduleName, dueDate } = this.state;
 
     return (
       <div>
-        <form>
-          <div className="form-control">
-            <label htmlFor="type">Assessment Type</label>
-            <input
-              name="type"
-              type="text"
-              value={type}
-              onChange={this.onChange}
-            />
-          </div>
+        <form onSubmit={this.onSubmit}>
+          <FormInputGroup
+            label="Assessment Type"
+            name="type"
+            value={type}
+            onChange={this.onChange}
+          />
+          <FormInputGroup
+            label="Module Name"
+            name="moduleName"
+            value={moduleName}
+            onChange={this.onChange}
+          />
+
+          <FormInputGroup
+            label="Due Date"
+            name="moduleName"
+            value={moduleName}
+            onChange={this.onChange}
+          />
 
           <div className="form-control">
-            <label htmlFor="module">Module</label>
-            <input
-              name="moduleName"
-              type="text"
-              value={moduleName}
-              onChange={this.onChange}
-            />
-          </div>
-
-          <div className="form-control">
-            <label htmlFor="date">Due Date</label>
-            <input
-              name="dueDate"
-              type="text"
-              value={dueDate}
-              onChange={this.onChange}
-            />
             <input id="submitBtn" type="submit" value="Add Assessment" />
           </div>
         </form>
