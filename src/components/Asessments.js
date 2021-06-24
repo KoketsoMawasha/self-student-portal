@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "../styling/assessments.css";
+import Assessment from "./Assessment";
 
 export default class Asessments extends Component {
   state = [
@@ -42,13 +44,7 @@ export default class Asessments extends Component {
     return (
       <div>
         {this.state.map((assessment) => {
-          return (
-            <div className="assessment">
-              <h1>{assessment.type}</h1>
-              <h3>{assessment.module}</h3>
-              <p>{assessment.dueDate}</p>
-            </div>
-          );
+          return <Assessment assessmentObj={assessment} />;
         })}
       </div>
     );

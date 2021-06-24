@@ -1,0 +1,13 @@
+.assessment{
+  padding: 2rem;
+  margin: 2rem;
+  background: rgb(250,250,250);
+}
+
+h1{
+  color: rgb(100,100,100);
+}
+
+#date{
+  margin-top: .5rem;
+}
