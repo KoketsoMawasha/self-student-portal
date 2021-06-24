@@ -19,5 +19,6 @@ FormInputGroup.propTypes = {
 };
 
 FormInputGroup.defaultProps = {
+  // if we dont provide the type, this will be the default
   type: "text",
 };

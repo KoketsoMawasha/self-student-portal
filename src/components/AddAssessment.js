@@ -43,7 +43,7 @@ export default class AddAssessment extends Component {
           <FormInputGroup
             label="Due Date"
             name="moduleName"
-            value={moduleName}
+            value={dueDate}
             onChange={this.onChange}
           />
 

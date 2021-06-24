@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default function Asessments() {
-  const state = [
+export default class Asessments extends Component {
+  state = [
     {
       id: 1,
       type: "Test",
@@ -33,10 +33,13 @@ export default function Asessments() {
       dueDate: "2021-10-12",
     },
   ];
-
-  return (
-    <div>
-      <p>all assessments displayed here</p>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        {this.state.map((a) => {
+          return <p>{a.type}</p>;
+        })}
+      </div>
+    );
+  }
 }
