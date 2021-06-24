@@ -42,9 +42,9 @@ export default class Asessments extends Component {
   ];
   render() {
     return (
-      <div>
+      <div className="assessments">
         {this.state.map((assessment) => {
-          return <Assessment assessmentObj={assessment} />;
+          return <Assessment key={assessment.id} assessmentObj={assessment} />;
         })}
       </div>
     );
