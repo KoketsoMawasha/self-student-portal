@@ -17,6 +17,7 @@ export default class AddAssessment extends Component {
     e.preventDefault();
 
     // 1.Check if inputs are there
+    if (!this.state.type) return;
 
     // 2.after successful submit, clear inputs
   };
@@ -42,7 +43,7 @@ export default class AddAssessment extends Component {
 
           <FormInputGroup
             label="Due Date"
-            name="moduleName"
+            name="dueDate"
             value={dueDate}
             onChange={this.onChange}
           />
