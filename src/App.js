@@ -6,11 +6,13 @@ import Assessments from "./components/Asessments";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <AddAssessment />
-      <Assessments />
-    </div>
+    <Provider>
+      <div className="App">
+        <Navbar />
+        <AddAssessment />
+        <Assessments />
+      </div>
+    </Provider>
   );
 }
 

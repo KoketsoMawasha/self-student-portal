@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styling/assessments.css";
 import Assessment from "./Assessment";
+import { Consumer } from "../../../context";
 
 export default class Asessments extends Component {
   state = [
@@ -42,11 +43,15 @@ export default class Asessments extends Component {
   ];
   render() {
     return (
-      <div className="assessments">
-        {this.state.map((assessment) => {
-          return <Assessment key={assessment.id} assessmentObj={assessment} />;
-        })}
-      </div>
+      <Consumer>
+        <div className="assessments">
+          {this.state.map((assessment) => {
+            return (
+              <Assessment key={assessment.id} assessmentObj={assessment} />
+            );
+          })}
+        </div>
+      </Consumer>
     );
   }
 }
