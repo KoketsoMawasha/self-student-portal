@@ -2,6 +2,19 @@ import React, { Component } from "react";
 
 const Context = React.createContext();
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "DELETE":
+      return {
+        ...state,
+        assignments: state.assignments.filter(
+          (assignment) => assignment.id !== action.payload
+        ),
+      };
+    default:
+      return state;
+  }
+};
 export class Provider extends Component {
   state = {
     assignments: [
@@ -41,6 +54,9 @@ export class Provider extends Component {
         dueDate: "2021-10-12",
       },
     ],
+    dispatch: (action) => {
+      this.setState((state) => reducer(state, action));
+    },
   };
 
   render() {
