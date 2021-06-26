@@ -33,6 +33,12 @@ input:focus{
   background: rgb(3, 165, 170);
   color: rgb(250,250,250);
   margin-top:1rem ;
+  transition: all 300ms ease-in-out; 
+}
+
+#submitBtn:hover{
+  background: rgb(2, 123, 160); 
+  transform: scale(1.05);
 }
 
 /* :required::after{
