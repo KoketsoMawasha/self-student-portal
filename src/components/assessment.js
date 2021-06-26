@@ -5,6 +5,16 @@ import deleteIcon from "../assets/deleteIcon.png";
 import completeIcon from "../assets/completeIcon.png";
 
 export default class Assessment extends Component {
+  deleteBtn = (e) => {
+    e.preventDefault();
+    console.log("delete me!");
+  };
+
+  completeBtn = (e) => {
+    e.preventDefault();
+    console.log("mark me as complete");
+  };
+
   render() {
     const { assessmentObj } = this.props;
     return (
@@ -16,11 +26,11 @@ export default class Assessment extends Component {
           <p id="date">{assessmentObj.dueDate}</p>
         </div>
         <div className="actionLinks">
-          <a href="#" className="completeIcon">
+          <a href="#" onClick={this.completeBtn} className="completeIcon">
             <img src={completeIcon} />
           </a>
 
-          <a href="#" className="deleteIcon">
+          <a href="#" className="deleteIcon" onClick={this.deleteBtn}>
             <img src={deleteIcon} alt="deleteIcon" />
           </a>
         </div>
