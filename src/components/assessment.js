@@ -8,13 +8,11 @@ import completeIcon from "../assets/completeIcon.png";
 export default class Assessment extends Component {
   deleteBtn = (id, dispatch, e) => {
     e.preventDefault();
-    console.log("delete me!");
     dispatch({ type: "DELETE", payload: id });
   };
 
   completeBtn = (e) => {
     e.preventDefault();
-    console.log("mark me as complete");
   };
 
   render() {
@@ -24,6 +22,7 @@ export default class Assessment extends Component {
       <Consumer>
         {(value) => {
           const { dispatch } = value;
+
           return (
             <div className="assessment">
               <div className="assessment-info">
@@ -32,8 +31,9 @@ export default class Assessment extends Component {
                 <p>{assessmentObj.description}</p>
                 <p id="date">{assessmentObj.dueDate}</p>
               </div>
+
               <div className="actionLinks">
-                <a href="#" onClick={this.completeBtn} className="completeIcon">
+                <a href="#" className="completeIcon" onClick={this.completeBtn}>
                   <img src={completeIcon} />
                 </a>
 

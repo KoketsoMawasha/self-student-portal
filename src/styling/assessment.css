@@ -4,9 +4,19 @@
   margin: 1rem;
 }
 
+.assessment.complete{
+  text-decoration: line-through black solid 1px;
+}
+
+
+
 h1{
   color: rgb(100,100,100);
 }
+
+/* .completeIcon{
+  text-decoration:overline black solid 1px;
+} */
 
 #date{
   margin-top: .5rem;
