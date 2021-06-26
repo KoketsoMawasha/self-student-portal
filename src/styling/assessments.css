@@ -2,6 +2,16 @@
   max-width: 92rem;
 }
 
+.actionLinks{
+  margin-top: 1rem;
+  /* display:flex;
+  justify-content: center; */
+}
+
+.actionLinks a{
+  margin-right: .3rem;
+}
+
 @media screen and (min-width: 720px) {
   .assessments{
     grid-template-columns: 1fr 1fr;
@@ -10,7 +20,20 @@
   .assessment{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
     max-width: 92rem; 
+  }
+
+  .actionLinks{
+    display: flex; 
+    flex-flow: column wrap; 
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .actionLinks a{
+    margin: .5rem 0;
   }
 
 }
