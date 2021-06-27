@@ -1,6 +1,7 @@
 import "../styling/AddAssessment.css";
 import React, { Component } from "react";
 import FormInputGroup from "./FormInputGroup";
+import { v1 as uuid } from "uuid";
 
 export default class AddAssessment extends Component {
   state = {
@@ -15,11 +16,27 @@ export default class AddAssessment extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+    const { type, moduleName, dueDate } = this.state;
 
     // 1.Check if inputs are there
-    if (!this.state.type) return;
+    if (!type) return;
+    if (!moduleName) return;
+
+    if (!dueDate) {
+      this.setState({ dueDate: "due date unknown" });
+    }
+
+    const newAssignment = {
+      id: uuid(),
+      type: type,
+      moduleName: moduleName,
+      dueDate: dueDate,
+    };
+
+    console.log(newAssignment);
 
     // 2.after successful submit, clear inputs
+    this.setState({ type: "", moduleName: "", dueDate: "" });
   };
 
   render() {
