@@ -32,7 +32,7 @@ export default class AddAssessment extends Component {
     const newAssignment = {
       id: uuid(),
       type: type,
-      moduleName: moduleName,
+      module: moduleName,
       dueDate: dueDate,
     };
 

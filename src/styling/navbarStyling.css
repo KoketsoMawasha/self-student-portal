@@ -8,6 +8,14 @@
   border-bottom: solid .1rem rgb(150,150,150);
 }
 
+.navbar h1{
+  font-size: 1.8rem;
+  background: -webkit-linear-gradient(rgb(20,20,20), rgb(250,250,250));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 ul{
   display: flex;
 }
