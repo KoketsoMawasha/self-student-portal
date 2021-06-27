@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styling/navbarStyling.css";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 // function Navbar() {
 //   return (
@@ -23,7 +24,13 @@ export default class Navbar extends Component {
       <div className="navbar">
         <h1>{heading}</h1>
         <ul className="nav-links">
-          <li className="add-link">Add</li>
+          <Link to="/" className="home-link">
+            <li className="home-link link">Home</li>
+          </Link>
+
+          <Link to="/assessment/add" className="add-assessment">
+            <li className="add-link link">Add</li>
+          </Link>
         </ul>
       </div>
     );
@@ -34,6 +41,6 @@ Navbar.propTypes = {
   heading: PropTypes.string,
 };
 
-// Navbar.defaultProps = {
-//   heading: "Assessments",
-// };
+Navbar.defaultProps = {
+  heading: "Add Assessment",
+};
