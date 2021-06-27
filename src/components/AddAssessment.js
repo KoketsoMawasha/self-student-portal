@@ -44,7 +44,7 @@ export default class AddAssessment extends Component {
   };
 
   render() {
-    const { id, type, moduleName, dueDate } = this.state;
+    const { type, moduleName, dueDate } = this.state;
 
     return (
       <Consumer>
