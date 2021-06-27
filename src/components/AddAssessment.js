@@ -19,13 +19,15 @@ export default class AddAssessment extends Component {
     e.preventDefault();
     const { type, moduleName, dueDate } = this.state;
 
-    // 1.Check if inputs are there
-    if (!type) return;
-    if (!moduleName) return;
-
+    // 1.Check presence of inputs
+    if (!type || !moduleName) return;
     if (!dueDate) {
       this.setState({ dueDate: "due date unknown" });
     }
+
+    dueDate
+      ? this.setState({ dueDate: dueDate })
+      : this.setState({ dueDate: "Due date unknown" });
 
     const newAssignment = {
       id: uuid(),

@@ -20,6 +20,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
+
 export class Provider extends Component {
   state = {
     assignments: [
