@@ -2,6 +2,7 @@ import "../styling/AddAssessment.css";
 import React, { Component } from "react";
 import FormInputGroup from "./FormInputGroup";
 import { v1 as uuid } from "uuid";
+import { Consumer } from "../context";
 
 export default class AddAssessment extends Component {
   state = {
@@ -14,7 +15,7 @@ export default class AddAssessment extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  onSubmit = (e) => {
+  onSubmit = (dispatch, e) => {
     e.preventDefault();
     const { type, moduleName, dueDate } = this.state;
 
@@ -33,6 +34,7 @@ export default class AddAssessment extends Component {
       dueDate: dueDate,
     };
 
+    dispatch({ type: "ADD_ASSIGNMENT", payload: newAssignment });
     console.log(newAssignment);
 
     // 2.after successful submit, clear inputs
@@ -40,36 +42,43 @@ export default class AddAssessment extends Component {
   };
 
   render() {
-    const { type, moduleName, dueDate } = this.state;
+    const { id, type, moduleName, dueDate } = this.state;
 
     return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <FormInputGroup
-            label="Assessment Type"
-            name="type"
-            value={type}
-            onChange={this.onChange}
-          />
-          <FormInputGroup
-            label="Module Name"
-            name="moduleName"
-            value={moduleName}
-            onChange={this.onChange}
-          />
+      <Consumer>
+        {(value) => {
+          const { dispatch } = value;
+          return (
+            <div>
+              <form onSubmit={this.onSubmit.bind(this, dispatch)}>
+                <FormInputGroup
+                  label="Assessment Type"
+                  name="type"
+                  value={type}
+                  onChange={this.onChange}
+                />
+                <FormInputGroup
+                  label="Module Name"
+                  name="moduleName"
+                  value={moduleName}
+                  onChange={this.onChange}
+                />
 
-          <FormInputGroup
-            label="Due Date"
-            name="dueDate"
-            value={dueDate}
-            onChange={this.onChange}
-          />
+                <FormInputGroup
+                  label="Due Date"
+                  name="dueDate"
+                  value={dueDate}
+                  onChange={this.onChange}
+                />
 
-          <div className="form-control">
-            <input id="submitBtn" type="submit" value="Add Assessment" />
-          </div>
-        </form>
-      </div>
+                <div className="form-control">
+                  <input id="submitBtn" type="submit" value="Add Assessment" />
+                </div>
+              </form>
+            </div>
+          );
+        }}
+      </Consumer>
     );
   }
 }

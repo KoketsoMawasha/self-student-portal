@@ -14,7 +14,7 @@ const reducer = (state, action) => {
     case "ADD_ASSIGNMENT":
       return {
         ...state,
-        assignments: [...state, action.payload],
+        assignments: [action.payload, ...state.assignments],
       };
     default:
       return state;
