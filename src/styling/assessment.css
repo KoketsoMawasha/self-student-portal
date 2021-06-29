@@ -5,6 +5,11 @@
 }
 
 .assessment.complete{
+  text-decoration: line-through;
+  background: rgb(65, 65, 65);
+}
+
+.assessment.complete{
   text-decoration: line-through black solid 1px;
 }
 

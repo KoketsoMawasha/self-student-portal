@@ -21,8 +21,8 @@ export default class AddAssessment extends Component {
 
     // 1.Check presence of inputs
     if (!type || !moduleName) return;
-    if (!dueDate) {
-      this.setState({ dueDate: "due date unknown" });
+    if (dueDate == "") {
+      this.setState({ dueDate: "Due date uknown" });
     }
 
     dueDate
@@ -57,7 +57,7 @@ export default class AddAssessment extends Component {
                   label="Assessment Type"
                   name="type"
                   value={type}
-                  onChange={this.onChange}
+                  onChange={this.onChange} 
                 />
                 <FormInputGroup
                   label="Module Name"

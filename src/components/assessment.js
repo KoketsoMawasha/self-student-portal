@@ -13,6 +13,7 @@ export default class Assessment extends Component {
 
   completeBtn = (e) => {
     e.preventDefault();
+    console.log(e);
   };
 
   render() {
@@ -33,7 +34,11 @@ export default class Assessment extends Component {
               </div>
 
               <div className="actionLinks">
-                <a href="#" className="completeIcon" onClick={this.completeBtn}>
+                <a
+                  href="#"
+                  className="completeIcon"
+                  onClick={this.completeBtn.bind(this)}
+                >
                   <img src={completeIcon} />
                 </a>
 
