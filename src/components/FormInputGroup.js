@@ -16,6 +16,7 @@ FormInputGroup.propTypes = {
   type: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  
 };
 
 FormInputGroup.defaultProps = {

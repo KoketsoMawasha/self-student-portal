@@ -16,6 +16,8 @@ const reducer = (state, action) => {
         ...state,
         assignments: [action.payload, ...state.assignments],
       };
+    // case "TOGGLE_COMPLETE":
+    //   return {};
     default:
       return state;
   }
@@ -29,6 +31,7 @@ export class Provider extends Component {
         type: "Test",
         module: "IT Management",
         description: "Study chapters 1-6: worth 25%",
+        complete: false,
         dueDate: "2021-07-12",
       },
       {
@@ -36,6 +39,7 @@ export class Provider extends Component {
         type: "Assignment",
         module: "IT Risk Management",
         description: "Complete assignment:  worth 30%",
+        complete: true,
         dueDate: "2021-06-28",
       },
       {
@@ -43,6 +47,7 @@ export class Provider extends Component {
         type: "ICE Task",
         module: "Business Analysis",
         description: "Complete activity 2.5 on RCLearn",
+        complete: false,
         dueDate: "2021-07-13",
       },
       {
@@ -50,6 +55,7 @@ export class Provider extends Component {
         type: "POE",
         module: "Introduction to Risk Management",
         description: "Complete POE assessment: worth 35%",
+        complete: false,
         dueDate: "2021-07-15",
       },
       {
@@ -57,6 +63,7 @@ export class Provider extends Component {
         type: "POE",
         module: "Work Integrated Learning",
         description: "Complete summative POE in groups: worth 35%",
+        complete: false,
         dueDate: "2021-10-12",
       },
     ],

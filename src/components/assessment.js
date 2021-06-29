@@ -4,8 +4,15 @@ import "../styling/assessment.css";
 import { Consumer } from "../context";
 import deleteIcon from "../assets/deleteIcon.png";
 import completeIcon from "../assets/completeIcon.png";
+import classnames from "classnames";
 
-export default class Assessment extends Component {
+class Assessment extends Component {
+  constructor() {
+    super();
+    this.state = {
+      complete: false,
+    };
+  }
   deleteBtn = (id, dispatch, e) => {
     e.preventDefault();
     dispatch({ type: "DELETE", payload: id });
@@ -13,7 +20,9 @@ export default class Assessment extends Component {
 
   completeBtn = (e) => {
     e.preventDefault();
-    console.log(e);
+    this.setState((prevState) => {
+      return { complete: !prevState.complete };
+    });
   };
 
   render() {
@@ -25,7 +34,11 @@ export default class Assessment extends Component {
           const { dispatch } = value;
 
           return (
-            <div className="assessment">
+            <div
+              className={classnames("assessment", {
+                complete: this.state.complete,
+              })}
+            >
               <div className="assessment-info">
                 <h1>{assessmentObj.type}</h1>
                 <h3>{assessmentObj.module}</h3>
@@ -61,3 +74,5 @@ export default class Assessment extends Component {
 Assessment.propTypes = {
   assessmentObj: PropTypes.object.isRequired,
 };
+
+export default Assessment;
