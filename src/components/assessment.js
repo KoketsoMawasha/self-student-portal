@@ -43,7 +43,11 @@ class Assessment extends Component {
                 <h1>{assessmentObj.type}</h1>
                 <h3>{assessmentObj.module}</h3>
                 <p>{assessmentObj.description}</p>
-                <p id="date">{assessmentObj.dueDate}</p>
+                <p id="date">
+                  {assessmentObj.dueDate
+                    ? assessmentObj.dueDate
+                    : "Due date unknown"}
+                </p>
               </div>
 
               <div className="actionLinks">
