@@ -35,7 +35,7 @@ export default class AddAssessment extends Component {
     console.log(newAssignment);
 
     // 2.after successful submit, clear inputs
-    this.setState({ type: "", moduleName: "", desription: "", dueDate: "" });
+    this.setState({ type: "", moduleName: "", description: "", dueDate: "" });
   };
 
   render() {
