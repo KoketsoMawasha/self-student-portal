@@ -16,8 +16,6 @@ const reducer = (state, action) => {
         ...state,
         assignments: [action.payload, ...state.assignments],
       };
-    // case "TOGGLE_COMPLETE":
-    //   return {};
     default:
       return state;
   }

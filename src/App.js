@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import AddAssessment from "./components/AddAssessment";
 import Assessments from "./components/Asessments";
 import { Provider } from "./context";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About";
 
 function App() {
