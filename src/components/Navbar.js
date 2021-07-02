@@ -3,19 +3,6 @@ import "../styling/navbarStyling.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-// function Navbar() {
-//   return (
-//     <div className="navbar">
-//       <h1>Assessments</h1>
-//       <ul>
-//         <li>Add</li>
-//         {/* <li>Mark Complete</li>
-//         <li>Delete</li> */}
-//       </ul>
-//     </div>
-//   );
-// }
-
 export default class Navbar extends Component {
   render() {
     const { heading } = this.props;
@@ -25,7 +12,7 @@ export default class Navbar extends Component {
         <h1>{heading}</h1>
         <ul className="nav-links">
           <Link to="/" className="home-link">
-            <li className="home-link link">Home</li>
+            <li className="home-link link">Portal</li>
           </Link>
 
           <Link to="/assessment/add" className="add-assessment">

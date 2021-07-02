@@ -9,3 +9,15 @@ body{
   color: rgb(150,150,150);
   font-size: 62.5%;
 }
+
+@media screen and (min-width: 720px) {
+  .about{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1.5rem;
+    align-items:center;
+    justify-content: center;
+    
+  }
+
+}
