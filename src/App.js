@@ -11,7 +11,7 @@ function App() {
     <Provider>
       <Router>
         <div className="App">
-          <Navbar heading="All Academia" />
+          <Navbar heading="Self Portal" />
           <Switch>
             <Route exact path="/assessment/add" component={AddAssessment} />
             <Route exact path="/" component={Assessments} />

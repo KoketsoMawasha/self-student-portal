@@ -21,19 +21,12 @@ export default class AddAssessment extends Component {
 
     // 1.Check presence of inputs
     if (!type || !moduleName) return;
-    if (dueDate === "") {
-      this.setState({ dueDate: "Due date uknown" });
-    }
-
-    dueDate
-      ? this.setState({ dueDate: dueDate })
-      : this.setState({ dueDate: "Due date unknown" });
 
     const newAssignment = {
       id: uuid(),
-      type: type,
-      module: moduleName,
-      dueDate: dueDate,
+      type,
+      moduleName,
+      dueDate,
     };
 
     dispatch({ type: "ADD_ASSIGNMENT", payload: newAssignment });
@@ -52,6 +45,14 @@ export default class AddAssessment extends Component {
           const { dispatch } = value;
           return (
             <div>
+              <h1
+                style={{
+                  textAlign: "center",
+                  margin: "1.5rem 0",
+                }}
+              >
+                Assign Workload
+              </h1>
               <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                 <FormInputGroup
                   label="Assessment Type"

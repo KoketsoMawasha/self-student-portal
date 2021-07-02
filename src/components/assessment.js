@@ -25,6 +25,8 @@ class Assessment extends Component {
     });
   };
 
+
+
   render() {
     const { assessmentObj } = this.props;
     const { id } = assessmentObj;
