@@ -5,6 +5,7 @@ import AddAssessment from "./components/AddAssessment";
 import Assessments from "./components/Asessments";
 import { Provider } from "./context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./components/About";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Switch>
             <Route exact path="/assessment/add" component={AddAssessment} />
             <Route exact path="/" component={Assessments} />
+            <Route exact path="/about" component={About} />
           </Switch>
         </div>
       </Router>
