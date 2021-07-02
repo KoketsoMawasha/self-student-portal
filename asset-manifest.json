@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Student-Self-Portal/static/css/main.15f9c8c6.chunk.css",
-    "main.js": "/Student-Self-Portal/static/js/main.e3a6dee7.chunk.js",
-    "main.js.map": "/Student-Self-Portal/static/js/main.e3a6dee7.chunk.js.map",
-    "runtime-main.js": "/Student-Self-Portal/static/js/runtime-main.5cd34a4d.js",
-    "runtime-main.js.map": "/Student-Self-Portal/static/js/runtime-main.5cd34a4d.js.map",
-    "static/js/2.8950081e.chunk.js": "/Student-Self-Portal/static/js/2.8950081e.chunk.js",
-    "static/js/2.8950081e.chunk.js.map": "/Student-Self-Portal/static/js/2.8950081e.chunk.js.map",
-    "static/js/3.13817337.chunk.js": "/Student-Self-Portal/static/js/3.13817337.chunk.js",
-    "static/js/3.13817337.chunk.js.map": "/Student-Self-Portal/static/js/3.13817337.chunk.js.map",
-    "index.html": "/Student-Self-Portal/index.html",
-    "static/css/main.15f9c8c6.chunk.css.map": "/Student-Self-Portal/static/css/main.15f9c8c6.chunk.css.map",
-    "static/js/2.8950081e.chunk.js.LICENSE.txt": "/Student-Self-Portal/static/js/2.8950081e.chunk.js.LICENSE.txt"
+    "main.css": "/self-student-portal/static/css/main.15f9c8c6.chunk.css",
+    "main.js": "/self-student-portal/static/js/main.e3a6dee7.chunk.js",
+    "main.js.map": "/self-student-portal/static/js/main.e3a6dee7.chunk.js.map",
+    "runtime-main.js": "/self-student-portal/static/js/runtime-main.829a1e78.js",
+    "runtime-main.js.map": "/self-student-portal/static/js/runtime-main.829a1e78.js.map",
+    "static/js/2.8950081e.chunk.js": "/self-student-portal/static/js/2.8950081e.chunk.js",
+    "static/js/2.8950081e.chunk.js.map": "/self-student-portal/static/js/2.8950081e.chunk.js.map",
+    "static/js/3.13817337.chunk.js": "/self-student-portal/static/js/3.13817337.chunk.js",
+    "static/js/3.13817337.chunk.js.map": "/self-student-portal/static/js/3.13817337.chunk.js.map",
+    "index.html": "/self-student-portal/index.html",
+    "static/css/main.15f9c8c6.chunk.css.map": "/self-student-portal/static/css/main.15f9c8c6.chunk.css.map",
+    "static/js/2.8950081e.chunk.js.LICENSE.txt": "/self-student-portal/static/js/2.8950081e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5cd34a4d.js",
+    "static/js/runtime-main.829a1e78.js",
     "static/js/2.8950081e.chunk.js",
     "static/css/main.15f9c8c6.chunk.css",
     "static/js/main.e3a6dee7.chunk.js"
