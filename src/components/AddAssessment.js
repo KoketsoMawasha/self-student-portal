@@ -21,7 +21,7 @@ export default class AddAssessment extends Component {
     const { type, moduleName, description, dueDate } = this.state;
 
     // 1.Check presence of inputs
-    if (!type || !moduleName) return;
+    if (!type || !moduleName || !description) return;
 
     const newAssignment = {
       id: uuid(),
