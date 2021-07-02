@@ -8,6 +8,7 @@ export default class AddAssessment extends Component {
   state = {
     type: "",
     moduleName: "",
+    description: "",
     dueDate: "",
   };
 
@@ -17,7 +18,7 @@ export default class AddAssessment extends Component {
 
   onSubmit = (dispatch, e) => {
     e.preventDefault();
-    const { type, moduleName, dueDate } = this.state;
+    const { type, moduleName, description, dueDate } = this.state;
 
     // 1.Check presence of inputs
     if (!type || !moduleName) return;
@@ -26,6 +27,7 @@ export default class AddAssessment extends Component {
       id: uuid(),
       type,
       moduleName,
+      description,
       dueDate,
     };
 
@@ -33,11 +35,11 @@ export default class AddAssessment extends Component {
     console.log(newAssignment);
 
     // 2.after successful submit, clear inputs
-    this.setState({ type: "", moduleName: "", dueDate: "" });
+    this.setState({ type: "", moduleName: "", desription: "", dueDate: "" });
   };
 
   render() {
-    const { type, moduleName, dueDate } = this.state;
+    const { type, moduleName, description, dueDate } = this.state;
 
     return (
       <Consumer>
@@ -64,6 +66,13 @@ export default class AddAssessment extends Component {
                   label="Module Name"
                   name="moduleName"
                   value={moduleName}
+                  onChange={this.onChange}
+                />
+
+                <FormInputGroup
+                  label="Description / Study Scope"
+                  name="description"
+                  value={description}
                   onChange={this.onChange}
                 />
 

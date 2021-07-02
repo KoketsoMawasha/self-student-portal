@@ -25,8 +25,6 @@ class Assessment extends Component {
     });
   };
 
-
-
   render() {
     const { assessmentObj } = this.props;
     const { id } = assessmentObj;
@@ -43,7 +41,7 @@ class Assessment extends Component {
             >
               <div className="assessment-info">
                 <h1>{assessmentObj.type}</h1>
-                <h3>{assessmentObj.module}</h3>
+                <h3>{assessmentObj.moduleName}</h3>
                 <p>{assessmentObj.description}</p>
                 <p id="date">
                   {assessmentObj.dueDate
