@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../styling/assessments.css";
 import Assessment from "./Assessment";
 import { Consumer } from "../context";
+import Header from "./Header";
 
 export default class Asessments extends Component {
   render() {
@@ -10,11 +11,16 @@ export default class Asessments extends Component {
         {(value) => {
           const { assignments } = value;
           return (
-            <div className="assessments">
-              {assignments.map((task) => {
-                return <Assessment key={task.id} assessmentObj={task} />;
-              })}
-            </div>
+            <>
+              <Header />
+              <h1 className="main-heading">Academic Workload</h1>
+              <div className="assessments">
+                {assignments.map((task) => {
+                  return <Assessment key={task.id} assessmentObj={task} />;
+                })}
+                
+              </div>
+            </>
           );
         }}
       </Consumer>

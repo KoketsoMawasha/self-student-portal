@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import AddAssessment from "./components/AddAssessment";
 import Assessments from "./components/Asessments";
+import Header from "./components/Header";
 import { Provider } from "./context";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About";
