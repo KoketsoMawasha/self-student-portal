@@ -12,6 +12,7 @@ class About extends Component {
         <Header src={headerImg} />
 
         <p>
+          <h3>About</h3>
           The self student portal was developed to facilitate the viewing,
           adding and marking of student's individual academic progress and
           position with their relevant workload.
