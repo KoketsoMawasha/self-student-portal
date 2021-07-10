@@ -1,7 +1,12 @@
 .header-container{
-  margin: 4rem 0;
+  margin: 2rem 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header-container img{
+  max-width: 40rem;
+  margin-top: 2rem;
 }

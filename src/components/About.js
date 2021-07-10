@@ -1,21 +1,24 @@
 import React, { Component } from "react";
+import Header from "./Header";
+import headerImg from "../assets/header2.png";
 
 class About extends Component {
   render() {
     return (
       <div className="about" style={aboutStyling}>
-        <h1 style={{ margin: "1.5rem 0", color: "white" }}>
+        {/* <h1 style={{ margin: "1.5rem 0", color: "white" }}>
           About Self Portal
-        </h1>
+        </h1> */}
+        <Header src={headerImg} />
 
         <p>
           The self student portal was developed to facilitate the viewing,
-          adding and makring of student's individual academic progress and
+          adding and marking of student's individual academic progress and
           position with their relevant workload.
           <br /> <br />
           The portal also strives to evolve into a real-time portal allowing
           students to post key lecture points and notes or class activities
-          during lectures for later group, review, engage & spark learning
+          during lectures for later reviewing, engagement & sparking of academic
           conversations even amongst learners that could not make it on campus
           for various reasons. Keeping all learners fully engaged and up to
           date. <br /> <br />

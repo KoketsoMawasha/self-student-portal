@@ -3,6 +3,7 @@ import "../styling/assessments.css";
 import Assessment from "./Assessment";
 import { Consumer } from "../context";
 import Header from "./Header";
+import headerImg from "../assets/header1.png";
 
 export default class Asessments extends Component {
   render() {
@@ -12,13 +13,12 @@ export default class Asessments extends Component {
           const { assignments } = value;
           return (
             <>
-              <Header />
+              <Header src={headerImg} />
               <h1 className="main-heading">Academic Workload</h1>
               <div className="assessments">
                 {assignments.map((task) => {
                   return <Assessment key={task.id} assessmentObj={task} />;
                 })}
-                
               </div>
             </>
           );
